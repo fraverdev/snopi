@@ -13,11 +13,11 @@ export default function VideoPreview() {
       <div className="aspect-video">
         {isPlaying ? (
           <iframe
+            src="https://player.vimeo.com/video/VIDEO_ID"
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/BCbr55A7ECc"
-            title="YouTube Video"
             frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
             className="object-cover w-full h-full"
           />
