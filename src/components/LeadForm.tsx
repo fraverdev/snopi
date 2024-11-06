@@ -17,7 +17,7 @@ export default function LeadForm() {
     setSubmitStatus('idle');
 
     try {
-      const response = await fetch('https://hook.eu2.make.com/7tjmqwx8wjv69sceu5sr759j1fmrmzuy', {
+      const response = await fetch('https://hook.eu2.make.com/1fseyeveijx6y11tye2k5pfbb0map96a', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
