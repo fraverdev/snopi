@@ -1,13 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Play } from 'lucide-react';
 import webDesignAd from '../assets/webdesign ad.mp4'; // Adjust the path according to your project structure
 
 export default function VideoSection() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [videoElement, setVideoElement] = useState(null);
 
   const handlePlayClick = () => {
     setIsPlaying(true);
   };
+
+  useEffect(() => {
+    // Preload video
+    const video = document.createElement('video');
+    video.src = webDesignAd;
+    video.preload = 'auto';
+    setVideoElement(video);
+  }, []);
 
   return (
     <section className="py-24 px-4 bg-gray-900">
