@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Play } from 'lucide-react';
+import webDesignAd from '../assets/webdesign ad.mp4'; // Adjust the path according to your project structure
 
 export default function VideoPreview() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -12,16 +13,12 @@ export default function VideoPreview() {
     <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-8">
       <div className="aspect-video">
         {isPlaying ? (
-          <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
-            <iframe
-              src="https://player.vimeo.com/video/1026811184?badge=0&autopause=0&player_id=0&app_id=58479"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              title="webdesign ad"
-              allowFullScreen
-            />
-          </div>
+          <video
+            src={webDesignAd}
+            controls
+            autoPlay
+            className="absolute top-0 left-0 w-full h-full"
+          />
         ) : (
           <>
             <img 
