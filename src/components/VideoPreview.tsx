@@ -12,7 +12,7 @@ export default function VideoPreview() {
     <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-8">
       <div className="aspect-video">
         {isPlaying ? (
-          <div style={{ padding: '75% 0 0 0', position: 'relative' }}>
+          <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
             <iframe
               src="https://player.vimeo.com/video/1026811184?badge=0&autopause=0&player_id=0&app_id=58479"
               frameBorder="0"
